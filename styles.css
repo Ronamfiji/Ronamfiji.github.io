@@ -2,8 +2,43 @@ body {
   background-color: powderblue;
 }
 h1 {
-  color: blue;
+  color: rgb(187, 187, 239);
 }
-p {
-  color: red;
+
+.container {
+  display: flex;
+}
+.layout {
+  display: grid;
+  grid-template-rows: 80px auto 1fr auto 50px;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 100vh;
+  grid-template-areas: 
+      "header      header      header"
+      "left        banner      right"
+      "left        main        right"
+      "left        bottom      right"
+      "footer      footer      footer";
+      grid-gap: 10px; padding: 10px;
+      font-weight: 600; font-size: 1em; text-align: center;
+}
+.left {
+  grid-area: left;
+  background-color: rgb(173, 104, 247);
+}
+.right {
+  grid-area: right;
+  background-color: bisque;
+}
+.banner {
+  grid-area: banner;
+  background-color: brown;
+}
+.header {
+  grid-area: header;
+  background-color: red;
+}
+.bottom {
+  grid-area: bottom;
+  background-color: blueviolet;
 }
